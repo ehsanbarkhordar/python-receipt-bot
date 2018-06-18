@@ -1,0 +1,33 @@
+version: '2.0'
+services:
+
+  web:
+    image: 'receipt:1.0.0'
+    environment:
+	#PostgreSQL Config
+     - PG_PORT=
+     - PG_USER=
+     - PG_PASS=
+     - PG_HOST=
+     - PG_DB_NAME=
+	#Receipt Config
+     - BASE_URL=wss://api.bale.ai/v1/bots/
+     - BOT_ID=
+     - TOKEN=
+     - TIME_SLEEP=
+     - MAX_TRY_TIMES=
+     - UPLOAD_MIME_TYPE=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+     - UPLOAD_FILE_NAME=
+     - UPLOAD_CAPTION_TEXT=
+     - TEMP_EXCEL_DIR=
+     - TEMP_EXCEL_SHEET_NAME=
+	#Logger Config
+     - SDK_USE_GRAYLOG=2    # 0: use graylog, 1:print to output, 2:both 0 and 1
+     - LOG_SOURCE=
+     - SDK_GRAYLOG_HOST=
+     - SDK_GRAYLOG_PORT=
+     - SDK_LOG_LEVEL=10 # FATAL = CRITICAL = 50, ERROR = 40,  WARN = WARNING = 30, INFO = 20, DEBUG = 10, NOTSET = 0
+      # SDK_LOG_FACILITY_NAME & BOT_LOG_FACILITY_NAME should be different
+     - SDK_LOG_FACILITY_NAME=
+    ports:
+     - "80:80"
