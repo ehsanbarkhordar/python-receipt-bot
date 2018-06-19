@@ -54,7 +54,7 @@ Run receipt_bot.py and it would be connected if you could see something like bel
 
 * **[EhsanBarkhordar](https://github.com/ehsanbarkhordar)** -initial work
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ehsanbarkhordar/python-receipt-bot/graphs/contributors) who participated in this project.
 
 ## License
 
